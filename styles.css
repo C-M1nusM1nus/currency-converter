@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background: #eef3f0;
+  color: #17231e;
+}
+
+.converter-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, #d8eee5 0, transparent 35%),
+    #eef3f0;
+}
+
+.converter-card {
+  width: min(100%, 520px);
+  padding: 38px;
+  border: 1px solid rgba(23, 35, 30, 0.08);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 24px 70px rgba(33, 55, 46, 0.13);
+}
+
+.converter-header {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  color: #16845a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  margin: 8px 0 8px;
+  font-size: clamp(2rem, 7vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.converter-header p {
+  margin: 0;
+  color: #68746e;
+  line-height: 1.5;
+}
+
+.amount-field,
+.currency-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  color: #58645e;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  height: 54px;
+  padding: 0 15px;
+  border: 1px solid #d9e1dd;
+  border-radius: 14px;
+  outline: none;
+  background: #f8faf9;
+  color: #17231e;
+  font: inherit;
+  font-weight: 650;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #16845a;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(22, 132, 90, 0.1);
+}
+
+.currency-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.swap-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: #e5f3ed;
+  color: #16845a;
+  font-weight: 800;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: 20px;
+  background: #17231e;
+  color: white;
+}
+
+.result-label {
+  color: #9eb1a8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.result strong {
+  font-size: clamp(2rem, 8vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 500px) {
+  .converter-card {
+    padding: 26px;
+    border-radius: 22px;
+  }
+
+  .currency-row {
+    grid-template-columns: 1fr;
+  }
+
+  .swap-icon {
+    display: none;
+  }
+}
